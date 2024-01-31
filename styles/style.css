@@ -1,0 +1,421 @@
+html {
+  background-color: #a6ceb6;
+}
+
+:root {
+  /* Font */
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Katibeh", sans-serif;
+  --font-accent: "Jacques Francois Shadow", sans-serif;
+  --spacing: 4px;
+
+  /* Color */
+  --color-card: #ffece1;
+  --color-small-card-Caesar: #c4eff2;
+  --color-small-card-Greek: #ffe9a7;
+  --color-main-border: #d0e1d7;
+  --color-main-background: #f5f3f0;
+  --color-text-body: #303030;
+  --color-h1-chef: #000;
+  --color-shape-ellipse: #bbdac7;
+}
+
+main {
+  width: 1440px;
+  height: 887px;
+  margin: 0 auto;
+  border-radius: 54px;
+  border: 28px solid var(--color-main-border);
+  background: linear-gradient(315deg, #e3fdf5 48%, #ffe6fa 100%);
+  box-shadow: 0px 10px 100px 20px rgba(132, 132, 132, 0.2);
+  margin-top: 150px;
+}
+
+body {
+  color: var(--color-text-body);
+}
+
+/* Utility */
+.border-box {
+  box-sizing: border-box;
+}
+
+.py-5 {
+  padding: calc(var(--spacing) * 5);
+}
+
+.py-0 {
+  padding: 0;
+}
+
+.margin-8 {
+  margin-bottom: calc(var(--spacing) * 8);
+}
+
+.margin-15 {
+  margin-bottom: calc(var(--spacing) * 15);
+}
+
+.margin-center {
+  margin: 0 auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.min-w-78 {
+  min-width: calc(var(--spacing) * 78.75);
+}
+
+.min-w-50 {
+  min-width: calc(var(--spacing) * 50.5);
+}
+
+.color--primary-card {
+  background-color: var(--color-card);
+}
+
+.color--secondary-card {
+  background-color: var(--color-small-card-Caesar);
+}
+
+.color--accent-card {
+  background-color: var(--color-small-card-Greek);
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* SVG Icon */
+.icon-text {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-primary);
+}
+
+.icon {
+  width: calc(var(--spacing) * 5);
+  height: calc(var(--spacing) * 5);
+  margin-right: 5px;
+}
+
+/* Card */
+.card {
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.card p {
+  font-family: var(--font-primary);
+  font-size: calc(var(--spacing) * 3);
+  line-height: calc(var(--spacing) * 3.625);
+}
+
+.card__content-time {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(var(--spacing) * 3.5);
+  line-height: calc(var(--spacing) * 4.25);
+}
+
+.card__content {
+  display: flex;
+  align-items: center;
+}
+
+.card__content p {
+  font-family: var(--font-primary);
+  font-size: calc(var(--spacing) * 4.5);
+  line-height: calc(var(--spacing) * 6);
+}
+
+.card--horizontal {
+  flex-direction: row;
+  align-items: center;
+}
+
+.card h1 {
+  font-family: var(--font-secondary);
+  font-size: calc(var(--spacing) * 12);
+  line-height: calc(var(--spacing) * 8);
+}
+
+.card--small .card__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(60%, 10%);
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card--small {
+  border-radius: 175px 30px 30px 30px;
+  flex-direction: row;
+  box-shadow: none;
+}
+
+.card--small .card__image img {
+  width: unset;
+  height: unset;
+  object-fit: none;
+}
+
+.card--small h2 {
+  font-family: var(--font-secondary);
+  font-size: calc(var(--spacing) * 7.5);
+  line-height: calc(var(--spacing) * 9);
+}
+
+.card--small .card__content-time {
+  flex-direction: row;
+  font-size: calc(var(--spacing) * 3);
+  line-height: calc(var(--spacing) * 3.63);
+  align-items: center;
+}
+
+.card--small .card__content-time span::after {
+  content: " | ";
+}
+
+.card--small .card__content {
+  margin-top: calc(var(--spacing) * 4);
+}
+
+.card--small .card__content p {
+  font-size: calc((var(--spacing) * 3.5));
+  line-height: calc(var(--spacing) * 4.5);
+}
+
+.card--small img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, 10%);
+}
+
+/* Card Chef */
+.card__chef {
+  background-image: url("/img/combined.svg");
+  background-color: #bbdac7;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: none;
+}
+
+.card__chef .card__content {
+  flex-direction: column;
+  padding-left: calc(var(--spacing) * 7);
+}
+
+.card__chef .card__content h1 {
+  font-size: calc(var(--spacing) * 15.5);
+  font-family: var(--font-accent);
+  color: var(--color-h1-chef);
+}
+
+.card__chef .card__content h2 {
+  font-family: var(--font-secondary);
+  font-size: calc(var(--spacing) * 10.5);
+  letter-spacing: calc(var(--spacing) * 2.5);
+  padding-top: calc(var(--spacing) * 4);
+}
+
+.card__chef .card__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(13%, -30%);
+}
+
+.card__chef .card__image img {
+  width: 611px;
+  height: 578px;
+  min-width: 611px;
+  min-height: 578px;
+}
+
+/* Menu */
+.card__menu {
+  border-radius: 30px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 10px 10px 24px 0px rgba(204, 203, 203, 0.25);
+  text-align: center;
+}
+
+.card__menu h1 {
+  color: var(--color-text-body);
+  font-family: var(--font-accent);
+  font-size: calc(var(--spacing) * 10);
+  line-height: calc(var(--spacing) * 18);
+}
+
+nav > .menu-item {
+  display: flex;
+  align-items: center;
+  padding: calc(var(--spacing) * 3.25) 0;
+  line-height: normal;
+}
+
+nav > .menu-item span {
+  font-family: var(--font-secondary);
+  font-size: calc(var(--spacing) * 6);
+  height: 20px;
+}
+
+nav > .menu-item img {
+  margin-left: calc(var(--spacing) * 16.75);
+  margin-right: calc(var(--spacing) * 3.75);
+}
+
+.active-menu {
+  background: url("/img/combined-menu-item.svg");
+  background-repeat: no-repeat;
+}
+
+/* Badge */
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: calc(var(--spacing) * 20.5);
+}
+
+.badge .rec-first .badge__content {
+  top: 0;
+  transform: translate(5%, 20%);
+}
+
+.badge .rec-first .badge__content p {
+  padding: 5px 0;
+}
+
+.badge .rec-first .badge__content #line-1 {
+  font-family: var(--font-accent);
+  font-size: calc(var(--spacing) * 6);
+}
+
+.badge .rec-first .badge__content #line-2 {
+  font-family: var(--font-secondary);
+  font-size: calc(var(--spacing) * 5);
+}
+
+.badge .rec-first .badge__content #line-3 {
+  font-family: var(--font-secondary);
+  font-size: calc(var(--spacing) * 7.5);
+}
+
+.badge .rec-first .first-clip {
+  bottom: 0;
+  left: 15%;
+  transform: translate(50%, 50%);
+  z-index: 999;
+}
+
+.seconde-clip {
+  bottom: 0;
+  right: 0;
+  transform: translate(-100%, 50%);
+  z-index: 99;
+}
+
+.badge .rec-seconde .badge__content {
+  top: 50%;
+  left: 0;
+  transform: translate(20%, -40%);
+}
+
+.badge .rec-seconde .badge__content p {
+  font-family: var(--font-secondary);
+  font-size: calc(var(--spacing) * 5);
+  transform: rotate(2.754deg);
+}
+
+.badge .rec-third .badge__content {
+  top: 50%;
+  left: 0;
+  transform: translate(25%, -60%);
+}
+
+.badge .rec-third .badge__content p {
+  font-family: var(--font-accent);
+  font-size: calc(var(--spacing) * 5);
+  transform: rotate(-5.347deg);
+}
+
+/* Card--frameless */
+.card--frameless {
+  align-items: center;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.card.card--frameless .card__content {
+  font-family: var(--font-secondary);
+  line-height: normal;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-block: 8rem;
+}
+
+.card--frameless .card__content h1 {
+  font-size: calc(var(--spacing) * 10);
+  letter-spacing: calc(var(--spacing) * 4);
+  transform: rotate(-90deg);
+  background: linear-gradient(91deg, #a1a1a1 0.68%, #8dd2a8 99.21%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 7%;
+  line-height: normal;
+}
+
+.card--frameless .shapes {
+  display: flex;
+  flex-direction: column;
+}
+
+.card--frameless .shapes p {
+  color: var(--color-shape-ellipse);
+  font-size: calc(var(--spacing) * 15);
+  font-family: var(--font-secondary);
+}
+
+.card--frameless .ellipses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card--frameless .ellipses .circle {
+  width: 15px;
+  height: 15px;
+  padding: 10px 0;
+}
+
+.card--frameless .ellipses .line {
+  height: 100px;
+}
